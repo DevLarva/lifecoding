@@ -2,11 +2,12 @@ import React, {Component} from 'react';
 
 class TOC extends Component {
     render() {
-      var list = [];
+      console.log('TOC render');
+      var lists = [];
       var data = this.props.data;
       var i =0;
       while(i < data.length) {
-        list.push(<li><a href={"/content" + data[i].id}>{data[i].title}</a></li>);
+        lists.push(<li><a href={"/content" + data[i].id}>{data[i].title}</a></li>);
         i= i + 1;
       }
       return (
@@ -14,9 +15,7 @@ class TOC extends Component {
 
         <nav>
         <ul>
-            <li><a href="1.html">HTML</a></li>
-            <li><a href="2.html">CSS</a></li>
-            <li><a href="3.html">JAVAScript</a></li>
+           {lists}
         </ul>
     </nav>
       );
