@@ -16,7 +16,7 @@ class App extends Component {
         {id:2, title:'CSS',desc:'CSS is for design'},
         {id:3, title:'JavaScript',desc:'JavaScript is for interactive'},
       ]
-     }
+     } 
   }
     render() {
       console.log('App render');
@@ -42,7 +42,12 @@ class App extends Component {
       >
 
       </Subject>
-       <TOC data={this.state.contents}></TOC>
+       <TOC 
+         onChangePage={function() {
+            alert('hi');
+          }.bind(this)}
+          data={this.state.contents}
+       ></TOC>
        <Content title={_title} desc= {_desc}></Content>
       </div>
       
