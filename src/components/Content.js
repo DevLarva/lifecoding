@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 
 class Content extends Component {
     render() {
+      this.props.title = 'hi';
       console.log('Content render');
       return (
         <article>
